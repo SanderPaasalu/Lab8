@@ -22,3 +22,4 @@ This project is made for openweatherAPI.
 So other might not work.\
 You will also need to get API get from them and make and put it in .env file(REACT_APP_API_KEY=APIKEYHERE)
 
+###Used bootstrap to make table more readable

@@ -1,6 +1,7 @@
 import "./App.css";
 import React, {useState, useEffect} from "react";
 import DateTime from "./DateTime";
+import 'bootstrap/dist/css/bootstrap.css';
 
 interface WeatherData {
     list: []
@@ -19,15 +20,15 @@ function App() {
             <div>
                 {weather.map(datetime => {
                     return <div>
-                        <table>
+                        <table className="container-md table-active, table-bordered">
                             <tbody>
-                            <tr>
-                                <td>Temp :{datetime.main.temp}</td>
-                                <td>Feels Like:{datetime.main.feels_like}</td>
-                                <td>Humitidy: {datetime.main.humidity}</td>
-                                <td>When: {datetime.dt_txt}</td>
-                                <td>Visibility: {datetime.visibility}</td>
-                                <td>Weather: {datetime.weather[0].main}</td>
+                            <tr >
+                                <td className="col-3">Temp :{datetime.main.temp}</td>
+                                <td className="col-2">Feels Like:{datetime.main.feels_like}</td>
+                                <td className="col-2">Humitidy: {datetime.main.humidity}</td>
+                                <td className="col-3">Date: {datetime.dt_txt}</td>
+                                <td className="col-2">Visibility: {datetime.visibility}</td>
+                                <td className="col-3">Weather: {datetime.weather[0].main}</td>
                             </tr>
                             </tbody>
                         </table>
