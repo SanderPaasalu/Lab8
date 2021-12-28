@@ -6,9 +6,11 @@ function LocationMarker() {
     const map = useMapEvents({
         click(e) {
             map.locate()
-            setPosition(e.latlng)
+        },
+        locationfound(e) {
+            //setPosition(e.latlng)
             map.flyTo(e.latlng, map.getZoom())
-        }
+        },
     })
     return position === null ? null : (
         <Marker position={position}>
@@ -21,8 +23,8 @@ function Map() {
 
     return (
         <MapContainer
-            center={{lat: 51.505, lng: -0.09}}
-            zoom={13}
+            center={{lat: 58.94306, lng: 23.54139}}
+            zoom={10}
             scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

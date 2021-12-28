@@ -59,7 +59,7 @@ function App() {
     console.log(weather)
     return (
         <div className="App">
-            <div> <Map />            </div>
+            <div id="map"> <Map />            </div>
             <h1>OpenweatherAPI</h1>
             <p>
                 {weather ? (
