@@ -1,6 +1,7 @@
 import "./App.css";
 import React, {useState, useEffect} from "react";
 import DateTime from "./DateTime";
+import Map from "./Map";
 import 'bootstrap/dist/css/bootstrap.css';
 
 interface WeatherData {
@@ -58,6 +59,7 @@ function App() {
     console.log(weather)
     return (
         <div className="App">
+            <div> <Map />            </div>
             <h1>OpenweatherAPI</h1>
             <p>
                 {weather ? (
